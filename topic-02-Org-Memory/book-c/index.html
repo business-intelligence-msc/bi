@@ -136,6 +136,14 @@ body
       03
     </a>
     
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
+    <a class="item" data-tab="05">
+      05
+    </a>
+    
     <a class="item" data-tab="Exercises">
       Exercises
     </a>
@@ -180,212 +188,177 @@ body
       
       <div  class="ui tab segment lab" data-tab="Lab-04">
         <h1>Objectives</h1>
-<p>Excel provides powerful tools for distilling a complex data set into meaningful information: Pivot Tables and PowerPivot Tables</p>
-<p>This lab was created using material from Data Visualisation with Advanced Excel by PwC available on www.coursera.org</p>
+<p>There is a need in data analysis to provide more than frequency distributions and histograms which only provide a basic summary. Numerical measures of location, dispersion, shape, and association provide more specific quantitative information about data. This lab will introduce you to measure of location such as average, median, and mode. Measures of dispersion which include the range, the variance, and standard deviation. Measures of shape includes coefficient of skewness. Measures of association which include correlation coefficient.</p>
 
       </div>
      
       <div  class="ui tab segment lab" data-tab="01">
-        <h1>PivotTables</h1>
-<p>PivotTables allow you to create custom summaries and charts of key information in the data. To apply pivottables you need a data set with column labels in the first row.</p>
-<p>The data set <a href="./archives/accounting.xlsx">Accounting Professionals</a> provides the results of a survey of 27 employees in a tax division of a Fortune 100 company. </p>
-<p>Select any cell in the data set and choose Insert PivotTable from the Insert tab and follow the steps of the wizard.</p>
-<p>Excel creates a new worksheet with a pivotTable as shown below:</p>
-<p><img src="./img/01.png" alt=""></p>
-<p>You should first decide what types of tables you wish to create. For example in the accounting data set, suppose you want to count the average number of years of service for males and females with and without a graduate degree. If you drag the variable Gender from the field list to the row labels area, the variable graduate degree? into the column labels area and the variable years of service into the values area, then you have created the PivotTable.</p>
-<p><img src="./img/02.png" alt=""></p>
-<p>However, the sum of years is probably not what you would want.</p>
-<p>In the Analyze tab for Pivot Table Tools in the menu bar, click on the Active Field group and choose Field Settings. You will be able to change the summarisation method in the PivotTable in the dialog. Selecting the Average results in the PivotTable shown below. We see that the average number of years of service is not much different for holders of graduate degrees, but that females have much fewer years of service than males.</p>
-<p><img src="./img/03.png" alt=""></p>
-<p>The beauty of pivotTables is that if you wish to change the analysis, you can simply uncheck the boxes in the field list or drag the variable names to different field areas.
-You may easily add multiple variables in the fields to create different views of the data.</p>
-<p>Create PivotTables to find the average number of years of undergraduate study for each age group with and whithout a CPA and the number of employees in each age group with and without a CPA in the Excel file Accounting Professionals.</p>
-<p>Create a PivotTable showing the count of the number of employees by age group.</p>
-<p><img src="./img/04.png" alt=""></p>
-<p>PivotTables also provide an easy method of constructing cross-tabulations for categorical data. 
-Extend the one above, drag the field Graduate Degree? into the column label box in the field list. This PivotTable is a cross-tabulation of the number of employees in each age group who do or do not posses a graduate degree.</p>
-<p><img src="./img/05.png" alt=""></p>
-<p>Open the file <a href="./archives/BicycleForPivot.xlsx">Bicycle Pivot</a>. Create a PivotTable to determine the total revenue for material groups in each sales organisaiton.</p>
-<p>Experiment with adding filters to the pivotTable, such as Distribution Channel. </p>
-<p>You can also drill down into the data by right clicking on the category Mountain bike, choose Expand/Collapse and then Expand, then choose the detail you want to see, in this case Material.
-Remove the drill down by removing the Material field in the field list for rows.</p>
-<p>Try restricting to the first quarter of 2007. To do this we add the field Date to the rows section, and then right click on one of the dates displayed, choose Group, and add Quarters, and Years to the groups.Then move the Years and Date fields that appear in the rows section to the filter section. Then click on the dropdown box for Years and tick 2007, click on the dropdown box for Date and choose the first quarter. </p>
-<p><img src="./img/06.png" alt=""></p>
+        <h1>Reminder of data types:</h1>
+<h2>Categorical (nominal) data:</h2>
+<p>categories according to specified characteristics. For example, a firm&#39;s customers might be classified by region (north america, south america, europe, and pacific), employees categorised as managers, supervisors and associates. The categories bear no quantative relationship to one another, but we usually assign an arbitrary number to each category to ease the process of managing the data and computing statistics. Categorical data are usually counted or expressed as proportions or percentages.
+This is what we did in the last lab.</p>
+<h2>Ordinal data:</h2>
+<p>ordered or ranked according to some relationship to one another. A common example in business is data from survey scales; for example, rating a service as poor, average, good, very good or excellent. Such data are categorical but also have a natural order and consequently are ordinal. other examples include ranking regions according to sales levels each month.
+Ordinal data are more meaningful than categorical data because data can be compared to one another, &quot;excellent&quot; is better than &quot;very good&quot;. However like categorical data, statistics such as averages are meaningless even if numerical codes are associated with each category, statistical differences between categories are also meaningless. For example the difference between rank 2 and 3 may not be equal to the difference between 3 and 4.</p>
+<h2>Interval data:</h2>
+<p>ordered , have a spcified measure of the distance between observations but have no natural zero. Common examples are time and temperature. Time is relative to global location, and calendars have arbitrary starting dates. Both the Fahrenheit and Celsius scales represent  a specified measure of distance in degrees but have no natural zero. Ratios cannot be meaningful on interval data, for example we can&#39;t say that 50 degrees is twice as hot as 25 degrees. Only the differences provide information on how much hotter or later or better one observation is over another. We can do a comparison of ranges, averages and some other statistical measures.</p>
+<h2>Ratio data:</h2>
+<p>have a natural zero. For example, dollar/euro has an absolute zero. Thus ratios are meaningful. Knowing Munster sold €20,000 in March and Leinster sold €10,000 means that Munster sold twice as much as Leinster. Most business and economic data fall into this category, and statistical methods are the most widely applicable to them.</p>
+<p>This classifcation of data types is hierarchial, in that each level includes all of the information content of the one preceding it. For example Ratio data can be converted to any of the other types of data. Interval data can be converted to ordinal or categorical.</p>
+<ul>
+<li>Sales occurred in March : categorical</li>
+<li>Sales were higher in March than in February: ordinal</li>
+<li>Sales increased by €50,000 in March over February: interval</li>
+<li>Sales were 20% higher in March than in February: ratio</li>
+</ul>
+<p>Higher level of measurement is most useful to a manager. Therefore before data are collected, consideration must be given to the type of data needed.</p>
+<h2>Descriptive statistics for numerical data</h2>
+<h3>Measures of Location</h3>
+<p>Measures of location provide estimates of a single value that in some fashion represents &quot;centering&quot; of the entire set of data. The most common is the average or formally called the arithmetic mean.</p>
+<p>The mean is the sum of all observations, divided by the number of observations.</p>
+<p>For the <a href="./archives/facebook-survey.xlsx">Facebook survey data</a>, the sum of the data in column D for hours online/week is 206. by dividing this by the number of students (33), we compute the mean as:</p>
+<pre><code>206/33 = 6.24</code></pre>
+<p>You can also calculate the mean in Excel by using the AVERAGE(data range) funciton.
+For the Facebook data it would be AVERAGE(E4:E36) = 176.97 if we were looking for the mean number of facebook friends.</p>
+<p>The mean is unique for every data set and is meaningful for both interval and ratio data. However it can be affected by outliers, observations that are radically different from the rest.</p>
+<p>Another measure is the median, the middle value when the data are arranged from smallest to largest. For an odd number of observations, the median is the middle of the sorted numbers. For an even number of observations, the median is the mean of the two middle numbers.
+The median is the same as the 50th percentile and the second quartile that we covered last week.</p>
+<p>To find the median in Excel we have a couple of options, we can sort the values in the Facebook data and then determine the median. Since we have 33 observations the median will be the 17th observation or 120 Friends. The excel function MEDIAN(data range) would also provide the result.</p>
+<p>The median is meaningful for ratio, interval and ordinal data. As opposed to the mean, the median is not affected by outliers. In this case the median is very close in value to the mean.</p>
+<p>The mode is the observation that occurs most frequently. The mode can easily be identified from a frequency distribution or histogram. For instance in the Facebook data we can see that the largest frequency of hours online/week is 6, which corresponds to a value of 4 hours per week.</p>
+<p>You can also use the Excel function MODE.SNGL(data range).</p>
+<p>What is the mode of Facebook friends?</p>
+<p>The mode is most useful for data sets that consist of relatively small number of unique values. When a data set has few repeating values the mode is not very useful.</p>
+<p>What is the mode in this frequency distribution?</p>
+<p><img src="./img/36.png" alt=""></p>
 
       </div>
      
       <div  class="ui tab segment lab" data-tab="02">
-        <h1>PowerPivot</h1>
-<p>There are many ways to analyse and summarise data in Excel, one feature is called PowerPivot. It is similar to the PivotTable feature you covered in step 1. However, POwerPivot is able to run pivot tables by merging several big datasets and run pivot tables off the consolidated data.</p>
-<p>To use PowerPivot you must be familiar with the Internal Data Model (IDM). IDM is the analytical engine that Excel uses behind the scenes to construct the PowerPivot. It is basically a database in which Excel organises information. Two features that are useful: first, it can establish relatinships between multiple databases. Second, it can hold unlimited number of rows and columns. You are only limited by a 2 gigabyte workbook and the memory available on the machine where Excel is running. (IDM is only available in Excel 2013 or newer)</p>
-<p>To active PowerPivot we need to add it to our available tabs in Excel. Go to the File menu and choose options.</p>
-<p><img src="./img/07.png" alt=""></p>
-<p>Excel options box opens, choose Add-ins from the menu on the left and then choose COM Add-ins from the drop down list Label Managed:</p>
-<p><img src="./img/08.png" alt=""></p>
-<p>Click Go.</p>
-<p>Check the box for Microsoft PowerPivot for Excel and click OK.</p>
-<p><img src="./img/09.png" alt=""></p>
-<p>Now you should see the PowerPivot tab appear on the top ribbon in Excel.</p>
-<p>![]./img/10.png)</p>
-<h2>Linking Data Tables</h2>
-<p>We will work on some Airline data for this step. Open the file <a href="./archives/PowerPivotLesson.xlsx">Power Pivot Lesson</a>.
-There are four data tables in this workbook each containing different kindds of airline data. </p>
-<p>The first is Flights, it contains information relating to flights out of Chicago, including:</p>
+        <h1>Measures of Dispersion</h1>
+<p>Dispersion refers to the degree of variation in the data, that is, the numerical spread of the data. For instance comparing the histograms of the facebook data clearly shows more variation in Friends than in the number of hours online/week. </p>
+<p>The range is the simplest maesurement of dispersion. It is computed as the difference between the maximum and the minimum value in the data set. Although Exel does not provide a range function you can use the combination of the MIN(data range) and MAX(data range) functions to get the answer.</p>
+<p>To avoid outliers, the interquartile (IQR) is often used, which is simply Q3-Q1. This range is the middle 50% of the data.</p>
+<p>A more commonly used measure of dispersion is the variance, whose computation depends on all the data. The larger the variance, the more the data are &quot;spread out&quot; from the mean, and the more variability one can expect in the observations.</p>
+<p>The formula used to calculate the variance is different for populations and samples. </p>
+<p>The function VAR.S(data range) may be used to compute the sample variance.
+The function VAR.P(data range) may be used to compute the population variance.</p>
+<p>A related measure which is perhaps the most popular and useful measure of dispersion, is the standard deviation, which is defined as the square root of the variance. </p>
+<p>The Excel function STDEV.S(data range) caculates the standard deviation for a sample.
+The Excel function STDEV.P(data range) caculates the standard deviation for a population.</p>
+<p>Using these functions for the facebook survey data, we find that the sample variance for hours online/week is 9.81 and the sample standard deviation is 3.13, and that the sample variance for the number of friends is 17996.78 and the sample standard deviation is 134.15.</p>
+<p>The standard deviation is easier to interpret as it uses the same units as the data. In this case the number of facebook friends varies by 134, this is quiet a big variation.</p>
+<p>The standard deviation is a useful measurement of risk, particularly in financial analysis.</p>
+<p>Open the excel file <a href="./archives/closing_stock_prices.xlsx">Closing Stock Prices</a>
+Calculate the average (mean) and standard deviation (sample) for each company, IBM, INTC etc. The last column is the Dow Jones Industrial average over a one month period.</p>
+<p>The average closing stock price for Intel (INTC) and General Electric (GE) are quite similar at $18.81 and $16.19 respectively. However the standard deviation of INTC&#39;s price over the time frame was $0.50, while GE&#39;s was $0.35. GE had less variability and, therefore, less risk.</p>
+<p>A larger standard deviation implies that while a greater potential exists of a higher return, there is also greater risk of realising a lower return. Many investment publications and web sites provide stadard deviations of stocks and mutual funds to help investors assess risk in this way.</p>
+<p>One of the most important results in statistics is Chebyshev&#39;s theorem.
+For any set of data, a proportion of values lie within a certain number of standard deviations of the mean.
+The empirical rules from this theorem may be applied as such:</p>
 <ul>
-<li>destination</li>
-<li>the ID of the aircraft</li>
-<li>the scheduled departure time</li>
-<li>pricing information </li>
-<li>date of the flight</li>
+<li>Approximately 68% of the observations will fall within one standard deviation of the mean.</li>
+<li>Approximately 95% of the observations will fall within two standard deviations of the mean.</li>
+<li>Approximately 99.7% of the observations will fall within three standard deviations of the mean.</li>
 </ul>
-<p>The second is Routes, it provide insight into:</p>
-<ul>
-<li>the specific departure and arrival airports</li>
-<li>the distance</li>
-<li>list price</li>
-</ul>
-<p>Note that all flights are coming out of ORD with is the airport code for O&#39;Hare International Airport Chicago.</p>
-<p>The third data table is the Aircraft tab, it provides specs for all aircraft in the fleet:</p>
-<ul>
-<li>type of aircraft,</li>
-<li>seat capacity</li>
-<li>fuel cost per seat per mile</li>
-</ul>
-<p>The last data table is the Airports tab which provides:</p>
-<ul>
-<li>airport full name</li>
-<li>number of available gates</li>
-</ul>
-<p>This lesson will address how to analyse this data, it is no simple task as the data is spread over several tabs. For example if the business asked you to analyse the types of aircraft that frequent certain routes and have delays, it would require you to combine data from the flights, aircraft and routes tabs. Instead of going back and forth between tabs we can use the relational data model and PowerPivot to analyse data across multiple tabs.</p>
-<p>First we convert the flights data into a table format so that we can use it in our PowerPivot data model. </p>
-<p>Click on the flights tab, select the entire dataset, navigate to the insert menu ribbon and choose Table from the options available. You will see a dialog box open to confirm the data range and confirm that the data has a row of headers. It is considered best practice to include headers when selecting a data set. This allows Excel to add informative field names in the data model and clarity to the user.</p>
-<p><img src="./img/11.png" alt=""></p>
-<p>Click OK. The dataset is now formated in a default table style. You will notice when the table is active that another tab called Table Tools Design appears on the main ribbon and the name of the table is presented to you.</p>
-<p><img src="./img/12.png" alt=""></p>
-<p>Now when we select any cell the design tab appears. We can change the name of the table as it is good practice to change it from the default. Let&#39;s call this set of data flights.</p>
-<p><img src="./img/13.png" alt=""></p>
-<p>Repeat this step for the other three datsets.</p>
-<p>Next we complete our data model in PowerPivot. </p>
-<ul>
-<li>Start with the flights table, click on a cell in the table</li>
-<li>Navigate to the PowerPivot tab and click on the Add to Data Model button</li>
-</ul>
-<p><img src="./img/14.png" alt=""></p>
-<p>The PowerPivot table is then displayed in a separate window. </p>
-<ul>
-<li>repeat these steps for each table until all four are added.</li>
-</ul>
-<p><img src="./img/15.png" alt=""></p>
-<p>Now that we have added all 4 of the tables to our data model, we need to form the required relationships between the tables to create our PowerPivot.</p>
-<ul>
-<li>Click on the tab called Pivot 1a. Next navigate to the PowerPivot tab, and select the Manage option. It may take a couple of seconds to load the data. </li>
-<li>Click on the Diagram View option</li>
-</ul>
-<p><img src="./img/16.png" alt=""></p>
-<p>This enables us to see each of the tables we have saved within the data model. For each table we must identify the links to the other tables by dragging lines between the tables, in order to create relationships. In order for this linking to work the columns must have exactly the same name.</p>
-<p><img src="./img/17.png" alt=""></p>
-<p>Route ID appears in the routes table and the flights table, this means it is a foreign key in the flights table and a primary key in the routes table.</p>
-<ul>
-<li>Click on the route ID in the flights table and drag it onto the route ID in the routes table.</li>
-</ul>
-<p><img src="./img/18.png" alt=""></p>
-<p>This creates a link in the diagram showing that these fields are the same. aircraft ID also appears in two tables, create the link as before. Lastly link the two occurrences of airport ID.</p>
-<p>Tip: always link from the foreign key side to the primary key side in a relationship.</p>
-<p><img src="./img/19.png" alt=""></p>
-<p>All tables in the diagram are now connected, no single table stands on its own. 
-Close the PowerPivot view.</p>
+<p>Depending on the data the percentages may be higher or lower.</p>
+<p>For the facebook data, one standard deviation around the mean yields:</p>
+<pre><code>
+mean calcuated on friends  = 176.97
+standard deviation = 134.15
+
+One standard deviation below the mean: 176.97 - 134.15 = 42.82
+One standard deviation above the mean: 176.97 + 134.15 = 311.12</code></pre>
+<p>If we count the number of observations in the range from 42.48 and 311.12 we find 25 out of the 33 observations lie in that area. Thus 75.8% of students fall within one standard deviation of the mean.</p>
+<p>How may students fall within 2 standard deviations of the mean in the facebook data?</p>
+<p>Calculate the obserations that fall within one, two and three standard deviations of the mean for each of the stocks in Closing Stock Prices. How do they compare with the empirical rules?</p>
 
       </div>
      
       <div  class="ui tab segment lab" data-tab="03">
-        <h1>PowerPivot to Visualise Data</h1>
-<p>For this exercise you are asked to look into the specific metrics with regard to flights and the aircraft that are being used. We are going to use the data model that we created in the last step.</p>
-<p> If we want to answer the qustion: How many flights use the A319 aircraft? We know that flight and aircraft data are stored in two different tabs of data. However we have used the aircraft ID to link those data sets together.</p>
-<p>Go to a new tab name it Exercise 2. We are going to place our pivot table in this new tab so it can expand as needed. 
-- Select the first cell in A1.
-- Next navigate to the PowerPivot tab on the ribbon
-- Click Manage
-- Click Pivot Table</p>
-<p><img src="./img/20.png" alt=""></p>
+        <h1>Measures of Shape</h1>
+<p>Histograms of sample data can take on a variety of different shapes. Some are symetrical, having its mode in the middle and falling away form the centre in roughly the same fashionon either side. Some are symetrical or skewed, that is, more of hte mass is concentrated on one side and the distribution of values tails off to the other. Those that tail off to the right, are called positively skewed. Those that tail off to the left are siad to be negatively skewed. Take a look at the historgrams you created so far and see what examples you have in terms of shape.</p>
+<p>The coefficient of skewness (CS), which can be found using the Excel function SKEW(data range) measures the degree of asymetry of observations around the mean. If CS is positive, the distribution of values is positively skewed; if negetive, it is negetively skewed. </p>
 <ul>
-<li>It prompts you to confirm that you want a pivot table created in the existing worksheet.</li>
+<li>The closer CS is to 0, the lesser the degree of skewness.</li>
+<li>A CS greater than 1 or less than -1 suggests a high degree of skewness.</li>
+<li>A value between 0.5 and 1 or between -0.5 and -1 represents moderate skewness.</li>
+<li>CS between 0.5 and -0.5 indicate relative symetry.</li>
 </ul>
-<p><img src="./img/21.png" alt=""></p>
+<p>Caculate the CS for the facebook data, for friends.</p>
+<p>If the histogram has only one peak it is called unimodal, one with two peaks is called bimodal.
+For unimodal historams that are relatively symetrical, the mode is a fairly good estimate of the mean.
+On the other hand, for the facebook data, the mode occurs in the bin 50-100 friends (there are 9 occurences of this category). The mid range of that category is 75, this is a signifcant distance from the calculated mean of 176, skewness pulls the mean away from the mode.</p>
+<p>comparing measures of location can sometimes reveal information about the shape of the distribution of observations. For example, it it were perfectly symmetrical and unimodal, the mean, median, and mode would all be the same.</p>
+<p>You can use the descriptive statistics tool in Excel to get a summary of measures. On the data tab click the Data Analysis button in the Analysis section. Then choose Descriptive Statistics, select the Friends data in the facebook data and tick summary statistics. This creates a new worksheet with the summary statistics all cacluated for you.</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Measures of Association</h1>
+<p>Two variables have a strong statistical relationship with one another if they appear to move together. We see examples on a daily basis; for instance, attendance at baseball games is often closely related to the win percentage of the team, and ice cream sales likely have a strong relationship with daily temperature.</p>
+<p>When two variables appear to be related, you might suspect a cause-and-effect relationship, sometimes however, statistical relationships exist even though a change in one variable is not caused by a change in the other. For example the New York Times reported a strong statistical relationship between the golf handicaps of corporate CEOs and their companies stock market performance over three years. CEOs who were better than average golfers were likely to deliver above average returns to shareholders. Clearly, the ability to golf would not cause better business performance. One must be cautious in drawing inferences about causal relationships based soley on statistical relationships.</p>
+<p>However the relationship between variables is extremely important in making good business decisions.</p>
+<p>The Excel file <a href="./archives/colleges_universities.xlsx">Colleges and Universities</a> contains data from 49 top liberal arts and research universities across the United States. Several questions might be asked about statistical relationships among these variables:</p>
 <ul>
-<li>All four tables in our data model appear on the right hand side.</li>
-<li>To answer the question we must combine the aircraft and flight datasets. Exapand those two datasets.</li>
+<li>Does a higher percentage of students in the top 10% or their high school class suggest a higher graduation rate?</li>
+<li>Is acceptance rate related to the amount spent per student?</li>
+<li>Do schools with lower acceptance rates tend to accept students with higher SAT scores?</li>
 </ul>
-<p><img src="./img/22.png" alt=""></p>
-<ul>
-<li>Now we can see flight ID and aircraft type. Drag these two fields into the values and rows fields respectively.</li>
-<li>Now we see the pivot table form.</li>
-<li>It shows a count of the flightIDs which is what we want to show since we are answering the question how many flights use the A319 aircraft.</li>
-<li><p>Cell B2 shows us there were 3879 flights that used the A319 aircraft.</p>
-</li>
-<li><p>The second question we wish to answer is: What is the most common type of aircraft used across all flights? What is the answer?</p>
-</li>
-<li><p>The next question is : What is the maximum average ticket price for flights on the A320 aircraft?</p>
-</li>
-<li><p>You can create a new tab if you wish to answer this question or re-work your existing power pivot.</p>
-</li>
-<li>We need the aircraft type (rows) and ticket price (values)</li>
-<li>By default the average ticket price is summed so we want to change this</li>
-<li>Click the dropdown arrow for Sum of Avg Ticket Price in the Values section, choose Value Field Setting.</li>
-</ul>
-<p><img src="./img/23.png" alt=""></p>
-<ul>
-<li>Choose Max from the list of options to summarise by.</li>
-</ul>
-<p><img src="./img/24.png" alt=""></p>
-<h2>PivotCharts</h2>
-<p>Another feature of PowerPivot is PivotCharts.</p>
-<p>This allows you to visualise data across multiple data sources. In this particular case we are being asked to visualise the number of flights flown for each aircraft type.</p>
-<ul>
-<li>Open a new tab name it PivotChart</li>
-<li>Click in cell D12 and then click on PowerPivot, then the Manage button and then the arrow below PivotTable.</li>
-<li>Choose PivotChart and use the existing workbook.</li>
-</ul>
-<p><img src="./img/25.png" alt=""></p>
-<ul>
-<li>You can adjust the height and width of the chart.</li>
-<li>Next select the fields for the x and y axis.</li>
-<li>Aircraft type should be placed in the Axis section.</li>
-<li>FlightID should be placed in the Values section.</li>
-<li>You can change the title by double clicking the text (change it to Flight ID vs Aircraft Type).</li>
-<li>The filter in the bottom left corner of the chart can be used to filter to only two types of aircrafts.</li>
-</ul>
+<p>These questions can be addressed by computing the correlation between the variables.</p>
+<p>Correlation is a measure of a linear relationship between two variables, X and Y, and is measured by the correlation coefficient. The correlation coefficient is between -1 and +1
+A correlation of 0 indicates that two variables have no linear relationship to each other. Thus, if one changes, we cannot resonably predict what the other variable might do. A positive correlation coefficient indicates a linear relationship for which one variable increases as the other also increases. A negative correlation coefficient indicates a linear relationship for one variable that increases while the other decreases.</p>
+<p>Excel&#39;s CORREL function computes the correlation coefficient of two data arrays, and the data analysis correlation tool computes correlation coefficients for more than two arrays.</p>
+<p>The correlation matrix for the data in Colleges and Universities is shown below:</p>
+<p><img src="./img/38.png" alt=""></p>
+<p>None of the correlations are very high; however, we see a moderate positive correlation between the graduate rate and SAT score (0.56414), this indicates that schools with higher SATs have higher graduation rates.
+We also see a negative correlation between acceptance rate and graduation rate (-0.55037751), indicating that schools with lower acceptance rates have higher graduation rates.</p>
+<p>Open the <a href="./archives/major_league_baseball.xlsx">major league basball</a> and calculate the correlations between some pairs of numerical variables. Do the results make sense?</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="05">
+        <h1>Descriptive Statistics for categorical data</h1>
+<p>Statistics such as mean and variance are not appropriate for categorical data. Instead we are generally interested in the fraction of data that have a certain characteristic. The formal statistical measure is called the sample proportion, usually denoted as p. Proportions are key descriptive statistics for categorical data, such as defects or errors in quality control applications or consumer preferences in market research.</p>
+<p>For example the facebook data in column B lists the gender of each respondent. The proportion of females is p = 20/33 = 0.606. The Excel function COUNTIF(data range, criteria) is useful in determining how many observations meet specified characteristics. For instance, to find the number of females, we used the function =COUNTIF(B4:B36,&quot;female&quot;). The criteria can be numerical , such as &quot;&gt;15&quot; or &quot;=0&quot; and so on.</p>
+<p>A cross tabulation is a basic statistical tool used to summarise categorical data. It is a tabular method that displays the number of observations in a data set for different subcategories of two categorical variables. The subcategories of the variables must be mutually exclusive and exhaustive, meaning that each observation can be classified into only one subcsategory and taken together over all subcategories, they must constitute the complete data set. A cross tab is also called a contingency table.</p>
+<p>If we want to identify the number of students who are in the different categories of views/day by Gender in the facebook data. If we convert the data into the proportions of each views/day group for females and males, we obtain the result shown below in table 2.6:</p>
+<p><img src="./img/39.png" alt=""></p>
+<p>We can also convert the values to proportions of each views/day for females and males, we can see the result in the above table 2.7
+It states that 30% of females are in the 1-5 views/day group, and that 20% of males are in the 1-5 group. Looking at the differences between genders we see some differences particularly in the 21-25 age group, there the proportion of males is three times higher than females.</p>
+<p>Cross tabs are commonly used in marketing research to provide insight into characteristics of different market segments using categorical variables such as gender, educational level, marital status and so on.</p>
+<h2>Visual display of statistical measures</h2>
+<h3>Box Plots</h3>
+<p>Box plots graphically display five key statistics of a data set - the minimum, first quartile, median, third quartile, and the maximum. They are very useful in identifying the sahpe of a distribution and outliers in the data.
+Box plots can be created in Excel using PHStat. </p>
+<p>The following site has links to download PHStat2 for your own laptops if you havent already done so. </p>
+<p>Using the facebook data, choose PHStat menu in the add-Ins tab and choose descriptive statistics, then boxplot, select the data for facebook friends including the column heading. Check single group variable, enter a title in the output options and tick five number summary box. Click Ok. A new worksheet contains the five numbers (minimum, first quartile, median, third quartile and maximum) and another worksheet contains the box plot diagram.</p>
+<p><img src="./img/40.png" alt=""></p>
+<p>The &quot;whiskers&quot; on either side of the box represent the maximum and minimum values, and the box encloses the first and third quartiles with a line inside the box representing the median. Very long whiskers indicate outliers in the data. Since the box is off centre to the left and the median line is off centre within the box, the distribution appears to be positively skewed (this was verified by the CS calculated earlier).</p>
+<h3>Dot-Scale Diagrams</h3>
+<p>A dot-scale diagram is another visual display that shows a histogram of data values as dots corresponding to individual data points, along with the mean, median, first and third quartiles, and +- 1, 2, and 3 standard deviation ranges from the mean. </p>
+<p>The Facebook friends data can be used to generate a dot-scale using the PHStat descriptive statistics menu again.</p>
+<p><img src="./img/41.png" alt=""></p>
+<p>Dot-scale diagrams provide a better visual picture and understanding of the data than box plot.</p>
+<p>Construct a box plot and dot-scale for the data in <a href="./archives/vacation_survey.xlsx">vacation survey</a></p>
+<h2>Outliers</h2>
+<p>Earlier we had noted that the mean and range are sensitive to outliers in the data. Outliers can make a significant difference in the results we obtain from statistical analyses. An important statistical question is how to identify them. The first thing to do from a practical perspective is to check the data for possible errors, such as a misplaced decimal point. </p>
+<p>Box plots and dot-scale diagrams can help identify possible outliers visually. The question is what to do with them. They should not be blindly eliminated unless there is a legitimate reason for doing so. Statisticians often suggest that analyses should be run with and without the outliers so that the results can be examined critically.</p>
 
       </div>
      
       <div  class="ui tab segment lab" data-tab="Exercises">
-        <h1>Practice PowerPivot and PivotChart</h1>
-<ul>
-<li>You will now create new PowerPivots to answer the following questions:</li>
-</ul>
-<ul>
-<li>How many flights are flown from O&#39;Hare (ORD) to Los Angeles International Aiport (LAX)?</li>
-<li>Which route accounts for the lowest percentage of total revenue? </li>
-<li>What was the most popular month to fly to Fort Lauderdale (FLL)?</li>
-<li>Create a pivot chart to show the number of flights per month on the ORD-PHL route.</li>
-</ul>
-<p>To answer the first question:</p>
-<ul>
-<li>Create a pivot table using PowerPivot on a new tab.</li>
-<li>We want to count the number of flights on a specific route, so count the flightID&#39;s. drag the flightid&#39;s field into the values section.</li>
-<li>The routes table only gives us flights leaving from Ohare so we can drag the airport id into the rows section. We can see in row 16 the number of flights to LAX is 699.</li>
-</ul>
-<p>To answer the second question:</p>
-<ul>
-<li>Create a pivot table using PowerPivot on a new tab.</li>
-<li>We want to sum the total revenue so drag it into the values section.</li>
-<li>We need to look at revenue for each route so drag routeid into the rows section.</li>
-<li>The table shows us the sum of total revenue per route not the percentage of total revenue.</li>
-<li>right click on the pivot table and choose Show Values As, and choose Percentage of Grand Total.</li>
-<li>You an then also sor the table so that the lowest is shown at the top</li>
-<li>The answer is Salt Lake City (SLC)</li>
-</ul>
-<p>Try to answer the third question yourself. (hint you will need to filter the table using routeid).
-Try to create the chart yourself.</p>
+        <h1>Exercises</h1>
+<p>Compute the mean, median, variance and standard deviation for all the variables in the file <a href="./archives/national_football_league.xlsx">National Football League</a></p>
+<p>The file <a href="./archives/Burglaries.xlsx">Burglaries</a> contains data on the number of burglaries before and after a Citizen Police program. Apply the descriptive statistics tool to these sets of data. What shows in the data? are there differences? What proportion of observations fall within one standard deviation of the mean, does that proportion increase or decrease between the two data sets?</p>
+<p>An engineering contractor estimates the drilling depth of piles, the actual drill footage of each is also recorded. Using the <a href="./archives/pile_foundation.xlsx">pile foundation</a> file compute the correlation coefficient between the estimated and actual pile lengths. What does this tell you? Create a scatter chart for the data.</p>
+<p>The file <a href="./archives/house_sales.xlsx">house sales</a> provides information on selling price, lot cost, type of home and region (m=midwest, s=south).
+Construct a scattor chart showing the relationship between sales price and lot cost. Does there appear to be a linear relationship? Compute the correlation coefficient.
+Construct scatter charts for the relationship between sales price and lot cost for each region. Do linear relationships exist? Compute the correlation coefficients.
+Construct scatter charts for the relationship between sales price and lot cost for each type of house. Do linear relationships exist? Compute the correlation coefficients.</p>
+<p>The file <a href="./archives/self_esteem.xlsx">self esteem</a> provides data on self esteem scores for randomly selected indiviuals with disabilities, it also includes the individuals marital status, length of work, type of support received, education and age.
+Construct cross tabulations of the number of individuals within each classification of marital status and support level.</p>
+<p>Practice generating box plots and dot-scale diagrams using the various data sets in this lab.</p>
 
       </div>
      
