@@ -136,6 +136,10 @@ body
       03
     </a>
     
+    <a class="item" data-tab="04">
+      04
+    </a>
+    
     <a class="item" data-tab="Exercises">
       Exercises
     </a>
@@ -164,6 +168,18 @@ body
       
         <a class="item" href="../../topic-02-Org-Memory/book-b/index.html">
           Lab-03
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-02-Org-Memory/book-c/index.html">
+          Lab-04
+        </a>
+      
+    
+      
+        <a class="item" href="../../topic-03-Info-Integration/book/index.html">
+          Lab-05
         </a>
       
     
@@ -274,6 +290,34 @@ This means 75% of the data falls below 250 Friends.</p>
 <p>We can extend these ideas to other divisions of the data. For example, deciles divide the data into 10 sets: the 10th percentile, 20th percentile, and so on. If you want the 10th percentile then you can use the percentile.inc formula with 0.1 in the formula.</p>
 <p>All these types of measures are called data profiles or fractiles.</p>
 <p>(the same information can be seen in your cumulative relative frequency column)</p>
+
+      </div>
+     
+      <div  class="ui tab segment lab" data-tab="04">
+        <h1>Filtering, Cleaning, Discovery</h1>
+<p>There is considerable effort required to clean and prepare any dataset as most have missing values, errors, incorrect codes, inconsistent values etc.</p>
+<p>In Excel a useful way to begin organising the data so that you can view it and discover the missing values etc is to convert the dataset into a table.</p>
+<p>Use the following file to practice:</p>
+<ul>
+<li><a href="./archives/BicycleData.xlsx">Bicycle Data</a> </li>
+</ul>
+<p>To do this you click in any cell of the data, from the Insert ribbon, choose Table. 
+Next Click Ok to accept the data range.</p>
+<p><img src="./img/18.png" alt=""></p>
+<p>You should then see the data something like this:</p>
+<p><img src="./img/19.png" alt=""></p>
+<p>The top of each column in the first row has the name of the variable as well as a drop down arrow. If you click on this arrow for the Distribution Channel you will see all of the values present for that variable. So for the Distribution Channel dimension you can see the values Internet, Wholesale and WS.</p>
+<p><img src="./img/20.png" alt=""></p>
+<p> Without further information we may not be sure if Wholesale and WS mean the same thing. For the purposes of this exercise we could make the assumption that they do mean the same thing.</p>
+<p>How would you approach editing all 2000+ rows from the WS value to Wholesale?</p>
+<p>You could create a new column so as to maintain the original (this is always a good idea):</p>
+<ul>
+<li>you could then write an IFS(test1,valueiftest1-true,test2,valueiftest2-true,...) function to convert where necessary.</li>
+<li>You could use the find and replace tool in Excel to find all occurences of WS and replace them with Wholesale.</li>
+</ul>
+<p>There may be other methods to achieve the same outcome, usually there are several ways in Excel or in most tools to accomplish the same task.</p>
+<p>Take a look at the column Material to see if a similar task is required.</p>
+<p>The table view is useful for finding empty cells as they show up in the drop down arrow filter menu.</p>
 
       </div>
      
