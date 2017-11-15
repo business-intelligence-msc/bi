@@ -9,14 +9,14 @@
 
      <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.css" type="text/css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/solarized-light.min.css" rel="stylesheet" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css" rel="stylesheet" />
 
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.address/1.6/jquery.address.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
-     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/languages/java.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/java.min.js"></script>
      <script>hljs.initHighlightingOnLoad();</script>
 
      
@@ -38,6 +38,13 @@ figcaption
 {
   display: flex;
   align-items: center;
+}
+
+.ui.segment.pushable
+{
+  margin: 0;
+  padding: 1rem 0;
+  overflow: visible;
 }
 
 
@@ -139,8 +146,7 @@ body
   </div>
 </div>
 
-<div class="ui segment pushable" >
-
+<div class="ui segment pushable">
   <div class="ui inverted labeled icon left inline vertical sidebar menu">
     
       
@@ -168,7 +174,7 @@ body
       
     
       
-        <a class="active item" href="../../topic-03-Info-Integration/book/index.html">
+        <a class="item" href="../../topic-03-Info-Integration/book/index.html">
           Lab-05
         </a>
       
@@ -414,23 +420,22 @@ Try to create the chart yourself.</p>
       </div>
      
     </div>
-
   </div>
-
 </div>
-<!--  <div class="ui bottom fixed borderless right menu">
-    <div class="ui right tiny menu">
-      <div class="ui mini message segment">
-        Dr. Brenda Mullally (bmullally@wit.ie) Ruth Barry (rbarry@wit.ie).
-        <a  href="http://creativecommons.org/licenses/by-nc/4.0/" title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
-            target="_blank">Creative Commons License
-        </a>
-      </div>
+<!--<div class="ui bottom fixed borderless right menu">
+  <div class="ui right tiny menu">
+    <div class="ui mini message segment">
+      .
+      <a href="http://creativecommons.org/licenses/by-nc/4.0/"
+         title="External link to http://creativecommons.org/licenses/by-nc/4.0/"
+         target="_blank">Creative Commons License
+      </a>
     </div>
-  </div>-->
+  </div>
+</div>-->
 
 <script>
-  $(document).on('keydown', function (e) {
+  $(document).on('keydown', function(e) {
   e = e || window.event;
   var nextTab;
   switch (e.which || e.keyCode) {
@@ -458,35 +463,37 @@ Try to create the chart yourself.</p>
 
     </footer>
     <script>
-      $(document).ready(function () {
+      $(document).ready(function() {
   $('img').addClass('ui image');
+
   $('.ui.embed').embed();
 
   const $images = $('.lab img');
-  jQuery.each($images, function (i) {
-    if (($images[i].alt).length > 0) {
-      const divImg = $(document.createElement('div')).addClass('ui basic segment');
+  jQuery.each($images, function(i) {
+    if ($images[i].alt.length > 0) {
+      const divImg = $(document.createElement('div')).addClass(
+        'ui basic segment',
+      );
       $($images[i]).wrap(divImg);
-      const divLabel = $(document.createElement('div')).addClass('ui blue ribbon label');
+      const divLabel = $(document.createElement('div')).addClass(
+        'ui blue ribbon label',
+      );
       divLabel.append($images[i].alt);
       $(divLabel).insertBefore($images[i]);
     }
   });
 
-  $('.ui.embed').embed();
-
-  $('.ui.menu .item')
-      .tab({
-        history: true,
-        historyType: 'hash',
-      });
+  $('.ui.menu .item').tab({
+    history: true,
+    historyType: 'hash',
+  });
 
   $('.popup').popup();
 
   $('.ui.sidebar')
-      .sidebar({ context: $('.pushable') })
-      .sidebar('setting', 'transition', 'slide out')
-      .sidebar('attach events', '#toc');
+    .sidebar({ context: $('.pushable') })
+    .sidebar('setting', 'transition', 'slide out')
+    .sidebar('attach events', '#toc');
 });
 
     </script>
